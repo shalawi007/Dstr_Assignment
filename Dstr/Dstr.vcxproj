@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Dstr.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="Orderlist.cpp" />
     <ClCompile Include="Report.cpp" />
