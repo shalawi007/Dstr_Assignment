@@ -65,15 +65,33 @@ void administratorMenu()
 {
 	int aChoice;
 	Report report;
+	Orderlist list;
+	
+	
 	cout << "1. Obtain purchase order records\n2. Modify/UpitemID order according to the priority\n3. View purchase orders\n4. Sort purchase orders\n5. Search purchase order\n6. View Sales Report\n7. View Summary Report\n8. Logout" << endl;
 	cin >> aChoice;
 	if (aChoice == 1)
 	{
-		obtainPurchaseOrder();
+		orderlist.insert("001","111","Motherboard","Asus","100$",10);
 	}
 	else if (aChoice == 2)
 	{
-		upitemIDOrder();
+			int choice;
+			string ID;
+			cout << "1) edit" << endl;
+			cout << "2) delete" << endl;
+			cout << "3) add" << endl;
+			cin >> choice;
+			switch(choice){
+				case 1: {
+					cout << "Enter Order ID :" << endl;
+					cin >> ID;
+					list.edit(ID, );
+					list.
+					break;
+				}
+			}
+		
 	}
 	else if (aChoice == 3)
 	{

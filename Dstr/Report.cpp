@@ -23,7 +23,7 @@ void Report::insert(string Id, string itId, string itR, string b, string p, int 
 	{
 		tail->next = newNode;
 		newNode->prev = tail;
-		tail = newNode;
+		tail = newNode; 
 	}
 }
 
