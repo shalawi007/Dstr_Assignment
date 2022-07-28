@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Dstr.cpp" />
     <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Orderlist.cpp" />
     <ClCompile Include="Report.cpp" />
     <ClCompile Include="Users.cpp" />
   </ItemGroup>

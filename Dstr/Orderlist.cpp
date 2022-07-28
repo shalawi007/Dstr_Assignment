@@ -1,11 +1,11 @@
-#include "Report.h"
-Report::Report()
+#include "Orderlist.h"
+Orderlist::Orderlist()
 {
 	head = nullptr;
 	tail = nullptr;
 }
 
-void Report::insert(string Id, string itId, string itR, string b, string p, int nIt)
+void Orderlist::insert(string Id, string itId, string itR, string b, string p, int nIt)
 {
 	Order order(Id, itId, itR, b, p, nIt);
 	Node* newNode;
@@ -27,7 +27,7 @@ void Report::insert(string Id, string itId, string itR, string b, string p, int 
 	}
 }
 
-void Report::displayFromHead()
+void Orderlist::displayFromHead()
 {
 	Node* temp = head;
 	if (head == nullptr)
@@ -48,29 +48,8 @@ void Report::displayFromHead()
 		}
 	}
 }
-void Report::displayHeadsummary()
-{
-	Node* temp = head;
-	if (head == nullptr)
-	{
-		cout << "NO Orders To show.." << endl;
-	}
-	else
-	{
-		while (true)
-		{
-			temp->data.showSummary();
-			cout << endl;
-			temp = temp->next;
 
-			if (temp == nullptr)
-				break;
-
-		}
-	}
-}
-
-void Report::displayFromTail()
+void Orderlist::displayFromTail()
 {
 	Node* temp = tail;
 	if (head == nullptr)
@@ -91,49 +70,7 @@ void Report::displayFromTail()
 		}
 	}
 }
-void Report::displayTailsummary()
-{
-	Node* temp = tail;
-	if (head == nullptr)
-	{
-		cout << "NO Orders To show.." << endl;
-	}
-	else
-	{
-		while (true)
-		{
-			temp->data.showSummary();
-			cout << endl;
-			temp = temp->prev;
-
-			if (temp == nullptr)
-				break;
-
-		}
-	}
-}
-void Report::sort() {
-	Node* current = NULL, * index = NULL;
-	Order temp;
-	 
-	if (head == NULL) {
-		cout << "NO Orders To show.." << endl;
-	}
-	else {
-		for (current = head; current->next != NULL; current = current->next) {
-			//Index will point to node next to current  
-			for (index = current->next; index != NULL; index = index->next) {
-				//comparing number of items if it greater than index  
-				if (current->data.NoItems > index->data.NoItems) {
-					temp = current->data;
-					current->data = index->data;
-					index->data = temp;
-				}
-			}
-		}
-	}
-}
-void Report::search(string d) //searching used here
+void Orderlist::search(string d) //searching used here
 {
 	Node* temp = tail;
 	if (head == nullptr)
@@ -157,7 +94,7 @@ void Report::search(string d) //searching used here
 		}
 	}
 }
-void Report::edit(string Id, string itId, string itR, string b, string p, int nIt)
+void Orderlist::edit(string Id, string itId, string itR, string b, string p, int nIt)
 {
 	Node* temp = tail;
 
@@ -181,7 +118,7 @@ void Report::edit(string Id, string itId, string itR, string b, string p, int nI
 	}
 
 }
-void Report::deleteInBetween(string val)
+void Orderlist::deleteInBetween(string val)
 {
 	Node* temp = tail;
 	Node* temp1 = head;
@@ -223,7 +160,7 @@ void Report::deleteInBetween(string val)
 	}
 }
 
-Report::~Report()
+Orderlist::~Orderlist()
 {
 
 

@@ -1,27 +1,28 @@
 #pragma once
 #include "Order.h"
 #include <iostream>
+#include<string>
 using namespace std;
 
-struct OrderNode
+struct Node
 {
 	Order data;
-	OrderNode* next;
-	OrderNode* prev;
+	Node* next;
+	Node* prev;
 };
 
-class OrderList
+class Orderlist
 {
-	OrderNode* head;
-	OrderNode* tail;
+	Node* head;
+	Node* tail;
 public:
-	OrderList();
-	void insert(string id, string ref, string item, string amt, string pr, string em, string ph, string stat);
+	Orderlist();
+	void insert(string Id, string itId, string itR, string b, string p, int nIt);
 	void displayFromHead();
 	void displayFromTail();
 	void deleteInBetween(string val);
 	void search(string d);
-	void edit(string m, string d, string ts, string te, string r, string o, int p);
-	~OrderList();
+	void edit(string Id, string itId, string itR, string b, string p, int nIt);
+	~Orderlist();
 
 };

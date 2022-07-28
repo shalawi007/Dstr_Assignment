@@ -6,7 +6,7 @@ using namespace std;
 class Users
 {
 public:
-	string memberID;
+	string orderID;
 	string name;
 	string password;
 	string Role;
