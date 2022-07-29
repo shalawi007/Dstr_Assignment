@@ -118,6 +118,27 @@ void Orderlist::edit(string Id, string itId, string itR, string b, string p, int
 	}
 
 }
+void Orderlist::sort() {
+	Node* current = NULL, * index = NULL;
+	Order temp;
+
+	if (head == NULL) {
+		cout << "NO Orders To show.." << endl;
+	}
+	else {
+		for (current = head; current->next != NULL; current = current->next) {
+			//Index will point to node next to current  
+			for (index = current->next; index != NULL; index = index->next) {
+				//comparing number of items if it greater than index  
+				if (current->data.NoItems > index->data.NoItems) {
+					temp = current->data;
+					current->data = index->data;
+					index->data = temp;
+				}
+			}
+		}
+	}
+}
 void Orderlist::deleteInBetween(string val)
 {
 	Node* temp = tail;
@@ -156,6 +177,48 @@ void Orderlist::deleteInBetween(string val)
 			{
 				temp = temp->prev;
 			}
+		}
+	}
+}
+void Orderlist::displayHeadsummary()
+{
+	Node* temp = head;
+	if (head == nullptr)
+	{
+		cout << "NO Orders To show.." << endl;
+	}
+	else
+	{
+		while (true)
+		{
+			temp->data.showSummary();
+			cout << endl;
+			temp = temp->next;
+
+			if (temp == nullptr)
+				break;
+
+		}
+	}
+}
+void Orderlist::displayTailsummary()
+{
+	Node* temp = tail;
+	if (head == nullptr)
+	{
+		cout << "NO Orders To show.." << endl;
+	}
+	else
+	{
+		while (true)
+		{
+			temp->data.showSummary();
+			cout << endl;
+			temp = temp->prev;
+
+			if (temp == nullptr)
+				break;
+
 		}
 	}
 }

@@ -23,6 +23,9 @@ public:
 	void deleteInBetween(string val);
 	void search(string d);
 	void edit(string Id, string itId, string itR, string b, string p, int nIt);
+	void sort();
+	void displayHeadsummary();
+	void displayTailsummary();
 	~Orderlist();
 
 };
