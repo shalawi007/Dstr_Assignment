@@ -70,7 +70,7 @@ void Orderlist::displayFromTail()
 		}
 	}
 }
-void Orderlist::search(string d) //searching used here
+void Orderlist::search(string d) //iterative searching used here ps: need some adjusment 
 {
 	Node* temp = tail;
 	if (head == nullptr)
@@ -100,6 +100,8 @@ void Orderlist::edit(string Id, string itId, string itR, string b, string p, int
 
 	while (true)
 	{
+
+
 		if (temp->data.orderID == Id)
 		{
 
@@ -115,10 +117,12 @@ void Orderlist::edit(string Id, string itId, string itR, string b, string p, int
 		{
 			temp = temp->prev;
 		}
+
+
 	}
 
 }
-void Orderlist::sort() {
+void Orderlist::sort() { //Quick sort using recursive implemntation
 	Node* current = NULL, * index = NULL;
 	Order temp;
 
@@ -157,14 +161,14 @@ void Orderlist::deleteInBetween(string val)
 				delete temp1;
 				break;
 			}
-			if (temp->prev || temp->next == nullptr)
+			else if (temp->prev || temp->next == nullptr)
 			{
 				temp->prev->next = nullptr;
 
 				delete temp;
 				break;
 			}
-			if (temp->data.orderID == val)
+			else if (temp->data.orderID == val)
 			{
 
 				temp->prev->next = temp->next;
@@ -222,6 +226,7 @@ void Orderlist::displayTailsummary()
 		}
 	}
 }
+
 
 Orderlist::~Orderlist()
 {

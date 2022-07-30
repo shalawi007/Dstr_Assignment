@@ -9,7 +9,7 @@
 using namespace::std;
 int Order::count = 0;
 
-int main(){
+int main() {
 	Queue userqueue(100);//Queue is made of 100 users.
 	int choice, opt, noItem;
 	Order order;
