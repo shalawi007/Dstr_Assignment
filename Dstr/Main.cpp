@@ -123,10 +123,10 @@ int main(){
 						system("cls");
 						break;
 					case 4:
-
+						//merge sort here
 						break;
 					case 5:
-
+						//expo search here
 						break;
 					case 6:
 						cout << "1) View in ascending Order based on No.Items" << endl;
@@ -283,10 +283,10 @@ int main(){
 						system("cls");
 						break;
 					case 4:
-
+						// merge sort here
 						break;
 					case 5:
-
+						// expo search here
 						break;
 					case 6:
 						return 0;
