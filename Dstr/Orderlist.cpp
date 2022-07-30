@@ -90,6 +90,7 @@ void Orderlist::search(string d) //iterative searching used here ps: need some a
 			else
 			{
 				temp = temp->prev;
+				cout << "Unable to found.." << endl;
 			}
 		}
 	}

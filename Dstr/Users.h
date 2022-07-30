@@ -6,12 +6,10 @@ using namespace std;
 class Users
 {
 public:
-	string orderID;
-	string name;
-	string password;
-	string Role;
-	string phoneNo;
-	string email;
+	[] string username;
+	[] string name;
+	[] string password;
+	[] string Role;
 public:
 	Users();
 	Users(string id, string n, string pas, string t, string ph, string em);

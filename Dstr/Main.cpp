@@ -55,6 +55,7 @@ int main() {
 						system("cls");
 						break;
 					case 2:
+						system("cls");
 						cout << "1) edit" << endl;
 						cout << "2) delete" << endl;
 						cout << "3) add" << endl;
@@ -124,27 +125,32 @@ int main() {
 						system("cls");
 						break;
 					case 4:
+						system("cls");
 						//merge sort here
 						break;
 					case 5:
+						system("cls");
 						//expo search here
 						break;
 					case 6:
 						system("cls");
 						cout << "1) View in ascending Order based on No.Items" << endl;
 						cout << "2) View in descending Order based on No.Items" << endl;
+						cout << "\n-----------------------------------------------------" << endl;
 						list.sort();
 						cin >> opt;
 						if (opt == 1) {
 							system("cls");
+							cout << "\n-----------------------------------------------------" << endl;
 							list.displayFromHead();
-							cout << "\n--------------------------------------------" << endl;
+							cout << "\n-----------------------------------------------------" << endl;
 							system("pause");
 							system("cls");
 							break;
 						}
 						else if (opt == 2) {
 							system("cls");
+							cout << "\n--------------------------------------------" << endl;
 							list.displayFromTail();
 							cout << "\n--------------------------------------------" << endl;
 							system("pause");
@@ -152,22 +158,25 @@ int main() {
 							break;
 						}
 					case 7:
+						system("cls");
 						cout << "1) View in ascending Order based on No.Items" << endl;
 						cout << "2) View in descending Order based on No.Items" << endl;
 						list.sort();
 						cin >> opt;
 						if (opt == 1) {
 							system("cls");
+							cout << "\n-----------------------------------------------------" << endl;
 							list.displayHeadsummary();
-							cout << "\n--------------------------------------------" << endl;
+							cout << "\n-----------------------------------------------------" << endl;
 							system("pause");
 							system("cls");
 							break;
 						}
 						else if (opt == 2) {
 							system("cls");
+							cout << "\n-----------------------------------------------------" << endl;
 							list.displayTailsummary();
-							cout << "\n--------------------------------------------" << endl;
+							cout << "\n-----------------------------------------------------" << endl;
 							system("pause");
 							system("cls");
 							break;
@@ -209,13 +218,15 @@ int main() {
 					{
 					case 1:
 						system("cls");
-						cout << "\n--------------------------------------------" << endl;
-						cout << "\n..................>>>>>>" << endl;
+						cout << "\n-----------------------------------------------------" << endl;
+						cout << "\n..................................>>>>>>>>>" << endl;
 						cout << "\nPurchase Order Records Obtained Succsefully..";
+						cout << "\n-----------------------------------------------------" << endl;
 						system("pause");
 						system("cls");
 						break;
 					case 2:
+						system("cls");
 						cout << "1) edit" << endl;
 						cout << "2) delete" << endl;
 						cout << "3) add" << endl;
@@ -285,9 +296,11 @@ int main() {
 						system("cls");
 						break;
 					case 4:
+						system("cls");
 						// merge sort here
 						break;
 					case 5:
+						system("cls");
 						// expo search here
 						break;
 					case 6:
