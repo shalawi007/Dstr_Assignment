@@ -141,14 +141,14 @@
   <ItemGroup>
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="Orderlist.cpp" />
-    <ClCompile Include="Report.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Users.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Order.h" />
     <ClInclude Include="Orderlist.h" />
-    <ClInclude Include="Report.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Users.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

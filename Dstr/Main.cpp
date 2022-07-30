@@ -4,16 +4,17 @@
 #include <string>
 #include "Order.h"
 #include "Orderlist.h"
+#include "Queue.h"
 #include<windows.h>
 using namespace::std;
 int Order::count = 0;
 
 int main(){
+	Queue userqueue(100);//Queue is made of 100 users.
 	int choice, opt, noItem;
 	Order order;
 	Orderlist list;
 	string id, itId, itRec, brand, price, orderDel;
-	char back;
 
 	list.insert("001", "111", "Motherboard", "Asus", "780$", 10);
 	list.insert("002", "121", "Monitor", "Samsung", "344$", 100);
@@ -129,6 +130,7 @@ int main(){
 						//expo search here
 						break;
 					case 6:
+						system("cls");
 						cout << "1) View in ascending Order based on No.Items" << endl;
 						cout << "2) View in descending Order based on No.Items" << endl;
 						list.sort();
