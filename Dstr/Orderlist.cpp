@@ -80,7 +80,7 @@ void Orderlist::search(string d) //iterative searching used here ps: need some a
 	else {
 		while (true)
 		{
-			if (temp->data.itemID == d || temp->data.itemRecord == d || temp->data.Brand == d)
+			if (temp->data.orderID == d || temp->data.itemRecord == d || temp->data.Brand == d)
 			{
 				temp->data.showOrderInfo();
 
@@ -90,7 +90,7 @@ void Orderlist::search(string d) //iterative searching used here ps: need some a
 			else
 			{
 				temp = temp->prev;
-				cout << "Unable to found.." << endl;
+
 			}
 		}
 	}
