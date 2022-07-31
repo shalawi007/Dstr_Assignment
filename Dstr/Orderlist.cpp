@@ -72,28 +72,35 @@ void Orderlist::displayFromTail()
 }
 void Orderlist::search(string d) //iterative searching used here ps: need some adjusment 
 {
-	Node* temp = tail;
-	if (head == nullptr)
+	Node* temp = head;
+	int pos = 0;
+	if (head == NULL)
 	{
 		cout << "NO Orders To search.." << endl;
 	}
-	else {
-		while (true)
+	temp = head;
+	while (temp != NULL)
+	{
+		pos++;
+		if (temp->data.orderID == d || temp->data.itemRecord == d || temp->data.Brand == d)
 		{
-			if (temp->data.orderID == d || temp->data.itemRecord == d || temp->data.Brand == d)
-			{
-				temp->data.showOrderInfo();
+			temp->data.showOrderInfo();
 
-				break;
-			}
+			return;
+		}
+		if (temp->next != NULL)
+		{
+			temp = temp->next;
+		}
 
-			else
-			{
-				temp = temp->prev;
+		else
+		{
+			break;
 
-			}
 		}
 	}
+	printf("%d does not exist in the list\n", d);
+
 }
 void Orderlist::edit(string Id, string itId, string itR, string b, string p, int nIt)
 {

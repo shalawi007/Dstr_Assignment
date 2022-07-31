@@ -21,7 +21,6 @@ int main() {
 	list.insert("003", "123", "Motherboard", "Dell", "123.46$", 50);
 	list.insert("004", "133", "CPU", "Intel", "24.60$", 25);
 	list.insert("005", "145", "Printer", "HP", "569$", 46);
-	list.insert("006", "111", "Motherboard", "Asus", "400$", 5);
 
 	cout << "1. Administrator\n2.Sale order executive \n Enter choice: ";
 	cin >> choice;
@@ -121,7 +120,7 @@ int main() {
 						}
 					case 3:
 						system("cls");
-						list.displayFromHead();
+						list.displayFromTail();
 						system("pause");
 						system("cls");
 						break;
