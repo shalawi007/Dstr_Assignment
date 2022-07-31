@@ -229,8 +229,89 @@ void Orderlist::displayTailsummary()
 }
 
 
-Orderlist::~Orderlist()
-{
+Orderlist::~Orderlist() {  
+}
 
+Orderlist::Quicksort() {
+	//quick sort algorithm
+	// combining the two halves into sorted data
+	void Merge(int* array[], int left, int right, int mid) {
+		//Right to mid+1 and left to mid have previously been arranged.
+		int i, j, k, temp[right - left + 1];
+		i = left;
+		k = 0;
+		j = mid + 1;
+
+		// Creating temp[] by merging two elements.
+		while (i <= mid && j <= right) {
+			if (array[i] < array[j]) {
+				temp[k] = array[i];
+				k++;
+				i++;
+			}
+			else {
+				temp[k] = array[j];
+				k++;
+				j++;
+			}
+		}
+
+		// Filling temp[] with all the lingering values between i and mid.
+		while (i <= mid) {
+			temp[k] = array[i];
+			k++;
+			i++;
+		}
+
+		// Adding all the remaining values, starting with j, into temp[].
+		while (j <= right) {
+			temp[k] = array[j];
+			k++;
+			j++;
+		}
+
+		// Sorting the data in temp[] and assign it to array[].
+		for (i = left; i <= right; i++) {
+			array[i] = temp[i - left];
+		}
+	}
+
+	// A split array function.
+	void MergeSort(int* array[], int left, int right) {
+		int mid;
+		if (left < right) {
+			mid = (left + right) / 2;
+			// Spliting the data into two equal halves.
+			MergeSort(array[], left, mid);
+			MergeSort(array[], mid + 1, right);
+
+			// Merging them to get sorted output.
+			Merge(array[], left, right, mid);
+		}
+	}
+
+	int main() {
+		int n, i;
+		cout << "\nEnter the number of data element to be sorted: ";
+		cin >> n;
+
+		int arr[n];
+		for (i = 0; i < n; i++) {
+			cout << "Enter element " << i + 1 << ": ";
+			cin >> arr[i];
+		}
+
+		MergeSort(arr, 0, n - 1);
+
+		// Printing the final sorted data.
+		cout << "\nSorted Data ";
+		for (i = 0; i < n; i++)
+			cout << "->" << arr[i];
+
+		return 0;
+	}
+}
+
+Orderlist::Expsearch() {
 
 }
