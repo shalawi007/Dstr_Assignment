@@ -219,7 +219,7 @@ int main() {
 					case 8:
 						return 0;
 					default:
-						break;
+						printf("\nPlease enter valid choice\n");
 					}
 				}
 				return 0;
@@ -372,7 +372,7 @@ int main() {
 					case 6:
 						return 0;
 					default:
-						break;
+						printf("\nPlease enter valid choice\n");
 					}
 				}
 				return 0;
