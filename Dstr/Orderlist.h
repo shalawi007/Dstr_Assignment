@@ -26,8 +26,6 @@ public:
 	void sort();
 	void displayHeadsummary();
 	void displayTailsummary();
-	//void Merge(int* array[], int left, int right, int mid);
-	//void MergeSort(int* array[], int left, int right);
 	~Orderlist();
 
 };

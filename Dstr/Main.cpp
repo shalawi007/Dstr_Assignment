@@ -184,6 +184,10 @@ int main() {
 							system("cls");
 							break;
 						}
+						else
+						{
+							cout << "Enter your choice again !!!" << endl;
+						}
 					case 7:
 						system("cls");
 						cout << "1) View in ascending Order based on No.Items" << endl;
@@ -207,6 +211,10 @@ int main() {
 							system("pause");
 							system("cls");
 							break;
+						}
+						else
+						{
+							cout << "Enter your choice again !!!" << endl;
 						}
 					case 8:
 						return 0;
@@ -350,6 +358,10 @@ int main() {
 						else if (opt == 3)
 						{
 							cout << "Enter Brand name: ";
+						}
+						else
+						{
+							cout << "Enter your choice again !!!" << endl;
 						}
 						cin >> look;
 						list.search(look);//iterative search
