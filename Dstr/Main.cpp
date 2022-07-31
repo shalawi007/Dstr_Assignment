@@ -14,13 +14,14 @@ int main() {
 	int choice, opt, noItem;
 	Order order;
 	Orderlist list;
-	string id, itId, itRec, brand, price, orderDel;
+	string id, itId, itRec, brand, price, orderDel, look;
 
 	list.insert("001", "111", "Motherboard", "Asus", "780$", 10);
 	list.insert("002", "121", "Monitor", "Samsung", "344$", 100);
 	list.insert("003", "123", "Motherboard", "Dell", "123.46$", 50);
 	list.insert("004", "133", "CPU", "Intel", "24.60$", 25);
 	list.insert("005", "145", "Printer", "HP", "569$", 46);
+	list.insert("006", "111", "Motherboard", "Asus", "400$", 5);
 
 	cout << "1. Administrator\n2.Sale order executive \n Enter choice: ";
 	cin >> choice;
@@ -126,11 +127,38 @@ int main() {
 						break;
 					case 4:
 						system("cls");
-						//merge sort here
+						list.sort();
+						cout << "--------------------------------------" << endl;
+						cout << "Purchase Orders Sorted Successfully.." << endl;
+						cout << "--------------------------------------" << endl;
+						system("pause");
+						system("cls");
 						break;
 					case 5:
 						system("cls");
-						//expo search here
+						cout << "--------------------------------------" << endl;
+						cout << "Enter 1 to search by Order ID :" << endl;
+						cout << "Enter 2 to search by Item Record :" << endl;
+						cout << "Enter 3 to search by Brand :" << endl;
+						cin >> opt;
+
+						if (opt == 1)
+						{
+							cout << "Enter Order ID: ";
+						}
+						else if (opt == 2)
+						{
+							cout << "Enter Item Record: ";
+						}
+						else if (opt == 3)
+						{
+							cout << "Enter Brand name: ";
+						}
+						cin >> look;
+						list.search(look);//iterative search
+						cout << "--------------------------------------" << endl;
+						system("pause");
+						system("cls");
 						break;
 					case 6:
 						system("cls");
@@ -211,8 +239,8 @@ int main() {
 				system("cls");
 				while (1) {
 					cout << "1. Obtain purchase order records\n2. Modify/UpitemID order according to the priority" << endl;
-					cout << "\n3. View purchase orders\n4.Sort purchase orders\n5.Search purchase order" << endl;
-					cout << "\n6.Logout" << endl;
+					cout << "3. View purchase orders\n4.Sort purchase orders\n5.Search purchase order" << endl;
+					cout << "6.Logout" << endl;
 					cin >> choice;
 					switch (choice)
 					{
@@ -297,11 +325,38 @@ int main() {
 						break;
 					case 4:
 						system("cls");
-						// merge sort here
+						list.sort();
+						cout << "--------------------------------------" << endl;
+						cout << "Purchase Orders Sorted Successfully.." << endl;
+						cout << "--------------------------------------" << endl;
+						system("pause");
+						system("cls");
 						break;
 					case 5:
 						system("cls");
-						// expo search here
+						cout << "--------------------------------------" << endl;
+						cout << "Enter 1 to search by Order ID :" << endl;
+						cout << "Enter 2 to search by Item Record :" << endl;
+						cout << "Enter 3 to search by Brand :" << endl;
+						cin >> opt;
+
+						if (opt == 1)
+						{
+							cout << "Enter Order ID: ";
+						}
+						else if (opt == 2)
+						{
+							cout << "Enter Item Record: ";
+						}
+						else if (opt == 3)
+						{
+							cout << "Enter Brand name: ";
+						}
+						cin >> look;
+						list.search(look);//iterative search
+						cout << "--------------------------------------" << endl;
+						system("pause");
+						system("cls");
 						break;
 					case 6:
 						return 0;
